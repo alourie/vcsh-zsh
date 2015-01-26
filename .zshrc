@@ -48,4 +48,8 @@ alias t=task
 alias run=xdg-open
 
 # Dircolors
-eval `dircolors ~/.dircolors`
+eval `/opt/boxen/homebrew/bin/gdircolors ~/.dircolors`
+
+# Boxen
+source /opt/boxen/env.sh
+export DOCKER_HOST=tcp://127.0.0.1:2375
