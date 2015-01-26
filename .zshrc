@@ -37,19 +37,26 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/alourie/.local/bin:/home/alourie/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin:/usr/sbin:/sbin/
+
 export TERM="xterm-256color"
 # User specific aliases and functions
-alias gp="cd /home/alourie/Projects/"
-alias reloadrc='. ~/.zshrc'
-alias edrc='vim ~/.vimrc ~/.zshrc'
+alias gp="cd ~/Projects/"
+alias edv='vim ~/.vimrc'
+alias edz='vim ~/.zshrc'
 alias t=task
-#alias vim="vim --servername default"
+alias vim='mvim -v'
+alias rl='source ~/.zshrc'
 alias run=xdg-open
 
 # Dircolors
 eval `/opt/boxen/homebrew/bin/gdircolors ~/.dircolors`
 
+# Z
+#source /Users/alex/Projects/z/z.sh
+
 # Boxen
 source /opt/boxen/env.sh
+
+# Remote docker
 export DOCKER_HOST=tcp://127.0.0.1:2375
